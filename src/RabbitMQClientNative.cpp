@@ -29,6 +29,7 @@ static const char16_t* g_PropNames[] = {
 	u"ClusterId",
 	u"Expiration",
 	u"ReplyTo",
+	u"Timestamp", // Ã¿»
 };
 static const char16_t* g_MethodNames[] = {
 	u"GetLastError",
@@ -64,6 +65,7 @@ static const char16_t* g_PropNamesRu[] = {
 	u"ClusterId",
 	u"Expiration",
 	u"ReplyTo",
+	u"Timestamp", // Ã¿»
 };
 static const char16_t* g_MethodNamesRu[] = {
 	u"GetLastError",
@@ -188,6 +190,7 @@ bool RabbitMQClientNative::GetPropVal(const long lPropNum, tVariant* pvarPropVal
 	case ePropClusterId:
 	case ePropExpiration:
 	case ePropReplyTo:
+	case ePropTimestamp: // Ã¿»
 		ret = impl.getMsgProp(pvarPropVal, lPropNum);
 		break;
 	default:
@@ -213,6 +216,7 @@ bool RabbitMQClientNative::SetPropVal(const long lPropNum, tVariant* varPropVal)
 	case ePropClusterId:
 	case ePropExpiration:
 	case ePropReplyTo:
+	case ePropTimestamp: // Ã¿»
 		ret = impl.setMsgProp(varPropVal, lPropNum);
 		break;
 	default:

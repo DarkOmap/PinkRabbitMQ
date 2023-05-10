@@ -24,6 +24,8 @@ public:
 	const int CLUSTER_ID = 8;
 	const int EXPIRATION = 9;
 	const int REPLY_TO = 10;
+	// Ã¿»
+	const int TIMESTAMP = 11;
 public:
 	RabbitMQClient() : Biterp::Component("RabbitMQClient"), priority(0), inConsume(false) {};
 

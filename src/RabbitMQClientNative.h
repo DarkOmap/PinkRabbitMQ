@@ -25,6 +25,7 @@ public:
 		ePropClusterId,
 		ePropExpiration,
 		ePropReplyTo,
+		ePropTimestamp, // Ã¿»
 		ePropLast // Always last
 	};
 

@@ -234,6 +234,8 @@ void RabbitMQClient::basicPublishImpl(Biterp::CallContext& ctx) {
 	if (!msgProps[CLUSTER_ID].empty()) envelope.setClusterID(msgProps[CLUSTER_ID]);
 	if (!msgProps[EXPIRATION].empty()) envelope.setExpiration(msgProps[EXPIRATION]);
 	if (!msgProps[REPLY_TO].empty()) envelope.setReplyTo(msgProps[REPLY_TO]);
+	// Ã¿»
+	if (!msgProps[TIMESTAMP].empty()) envelope.setTimestamp(stoll(msgProps[TIMESTAMP]));
 	if (priority != 0) envelope.setPriority(priority);
 	if (persistent) { envelope.setDeliveryMode(2); }
 	envelope.setHeaders(headersFromJson(propsJson));
